@@ -1,0 +1,465 @@
+/* กำหนดสไตล์พื้นฐานให้หน้าเว็บ */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f7f6; /* พื้นหลังสีอ่อน */
+    margin: 0;
+    padding: 0;
+}
+
+/* คอนเทนเนอร์หลัก */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ส่วนหัว */
+header h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* ทำให้ตารางดูเรียบง่ายและสบายตา */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* สไตล์สำหรับตาราง */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* ฟอร์มเลือกสิทธิ์และปุ่ม */
+select, button {
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* ปรับสไตล์สำหรับปุ่มลบ */
+.delete-btn {
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* ปรับปุ่มออกจากระบบ */
+.logout-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
+/* สไตล์สำหรับหัวข้อในตาราง */
+h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* กำหนดการจัดการฟอร์ม */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* เพิ่มความสมดุลให้ฟอร์ม */
+.form-group {
+    width: 48%;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* ปรับพื้นหลังของแต่ละปุ่ม */
+button:hover {
+    background-color: #218838;
+}
+
+.nav-button {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+}
+/* ให้ body และ container เต็มจอ */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* ใช้ความสูงเต็มหน้าจอ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #FFD700); /* พื้นหลัง Gradient */
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px; /* กำหนดความกว้างสูงสุด */
+    margin: 0;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: linear-gradient(135deg, #007bff, #FFD700);
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* ฟอร์มและอินพุตให้เต็มพื้นที่ */
+input, button {
+    width: 100%;  /* ขยายให้เต็มความกว้าง */
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* ปรับให้ปุ่มมีสีที่สวยงาม */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.nav-button {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* ทำให้ฟอร์มดูดีบนอุปกรณ์ขนาดเล็ก */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+/* สไตล์ทั่วไป */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* สไตล์สำหรับคอนเทนเนอร์ */
+.container {
+    width: 90%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3B83F0, #5DDB4A);
+}
+
+/* สไตล์สำหรับหัวเรื่อง */
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+
+/* สไตล์สำหรับตาราง */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.data-table td {
+    background-color: #f2f2f2;
+}
+
+.data-table td img {
+    border-radius: 50%;
+}
+
+/* สไตล์ปุ่ม */
+.nav-button {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+.lok{
+    background-color: #f44336;
+}
+/* กำหนดพื้นหลังให้กับ body */
+body {
+    background: linear-gradient(135deg, #3B83F0, #5DDB4A); /* พื้นหลังเป็นสีขาว */
+    font-family: Arial, sans-serif; /* เลือกฟอนต์ที่อ่านง่าย */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ทำให้หน้าเว็บเต็มหน้าจอ */
+    box-sizing: border-box;
+}
+
+/* สไตล์ของ container */
+.container1 {
+    background-color: #ffffff; /* พื้นหลังของคอนเทนเนอร์ */
+    border-radius: 50px; /* มุมโค้งมน */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* เงาคอนเทนเนอร์ */
+    padding: 100px;
+    width: 100%;
+    max-width: 1500px; /* กำหนดความกว้างสูงสุด */
+    text-align: center; /* ให้ข้อความอยู่กลาง */
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+/* สไตล์ของปุ่ม */
+button {
+    background-color: #4CAF50; /* ปุ่มสีเขียว */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* เพิ่มฟอนต์สีและปรับขนาดข้อความ */
+h1 {
+    color: #333; /* สีข้อความ */
+    font-size: 2em; /* ขนาดตัวอักษร */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+body {
+    background: linear-gradient(135deg, #3B83F0, #5DDB4A); /* ใช้สีที่ต้องการที่นี่ */
+    height: 100vh; /* ให้พื้นที่เต็มหน้าจอ */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+/* Full page setup */
+body {
+    background: linear-gradient(135deg, #007BFF, #FFD700);
+    height: 100vh; /* กำหนดให้ความสูงเต็มหน้าจอ */
+    margin: 0;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่กลางแนวนอน */
+    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+    font-family: Arial, sans-serif;
+}
+
+/* Form container */
+.login-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    color: #333;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.nav-button {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+

@@ -1,0 +1,38 @@
+CREATE DATABASE IF NOT EXISTS car_registration;
+
+USE car_registration;
+
+-- ตารางผู้ใช้
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,    -- ชื่อ
+    last_name VARCHAR(255) NOT NULL,     -- นามสกุล
+    email VARCHAR(255) NOT NULL UNIQUE,  -- อีเมล
+    faculty VARCHAR(255) NOT NULL,       -- คณะ
+    department VARCHAR(255) NOT NULL,    -- สาขา
+    student_id VARCHAR(255) NOT NULL,    -- เลขประจำตัวนักศึกษา
+    year INT NOT NULL,                   -- ปีที่กำลังศึกษา
+    year_of_study VARCHAR(255) NOT NULL, -- ปีการศึกษา
+    academic_year INT NOT NULL,          -- ชั้นปี
+    password VARCHAR(255) NOT NULL,      -- รหัสผ่าน
+    role ENUM('admin', 'user') DEFAULT 'user',  -- สิทธิ์ของผู้ใช้
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- ตารางป้ายทะเบียนรถ
+CREATE TABLE IF NOT EXISTS license_plates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    plate_number VARCHAR(255) NOT NULL,   -- หมายเลขป้ายทะเบียน
+    vehicle_owner VARCHAR(255) NOT NULL,  -- ชื่อเจ้าของรถ
+    vehicle_type VARCHAR(255) NOT NULL,   -- ประเภทของรถ
+    user_id INT,                          -- รหัสผู้ใช้ (เชื่อมโยงกับตาราง users)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)  -- เชื่อมโยงกับตาราง users
+);
+CREATE TABLE cars (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    plate_number VARCHAR(20) NOT NULL,
+    owner VARCHAR(100) NOT NULL,
+    car_type VARCHAR(50) NOT NULL,
+    registration_date DATE NOT NULL
+);

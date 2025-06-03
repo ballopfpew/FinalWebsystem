@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>สมัครสมาชิก</h1>
+        <form action="signup.php" method="POST">
+            <!-- First Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first_name">ชื่อ:</label>
+                    <input type="text" name="first_name" id="first_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">นามสกุล:</label>
+                    <input type="text" name="last_name" id="last_name" required>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">อีเมล:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="faculty">คณะ:</label>
+                    <input type="text" name="faculty" id="faculty" required>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="department">สาขา:</label>
+                    <input type="text" name="department" id="department" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="student_id">เลขประจำตัวนักศึกษา:</label>
+                    <input type="text" name="student_id" id="student_id" required>
+                </div>
+            </div>
+
+            <!-- Fourth Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="year">ปีที่กำลังศึกษา:</label>
+                    <input type="number" name="year" id="year" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">รหัสผ่าน:</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+            </div>
+
+            <!-- Fifth Row for License Plate -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="plate_number">หมายเลขป้ายทะเบียน:</label>
+                    <input type="text" name="plate_number" id="plate_number" required>
+                </div>
+            </div>
+
+            <button type="submit">สมัครสมาชิก</button>
+        </form>
+
+        <a href="login.php" class="nav-button">กลับสู่หน้าเข้าสู่ระบบ</a>
+    </div>
+</body>
+</html>
